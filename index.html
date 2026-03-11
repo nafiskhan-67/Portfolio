@@ -9,7 +9,6 @@
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&family=Share+Tech+Mono&display=swap"
         rel="stylesheet" />
     <style>
-        /* ── ORBITRON = closest free alternative to Neuropol/Ethnocentric ── */
         :root {
             --bg: #03030a;
             --surf: #07070f;
@@ -18,12 +17,10 @@
             --acc2: #ff3d6b;
             --acc3: #7c6bff;
             --text: #e8e8f2;
-            --muted: #707088;
-            --muted2: #ababc4;
-            --border: rgba(255, 255, 255, 0.05);
+            --muted: #cfcfcf;
+            --muted2: #b8b8c6;
+            --border: rgba(255, 255, 255, 0.2);
             --bora: rgba(0, 229, 255, 0.16);
-
-            /* font aliases */
             --f-head: 'Orbitron', sans-serif;
             --f-body: 'Exo 2', sans-serif;
             --f-mono: 'Share Tech Mono', monospace;
@@ -88,7 +85,7 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.028'/%3E%3C/svg%3E");
         }
 
-        /* ══════════════════ NAV ══════════════════ */
+        /* ══ NAV ══ */
         nav {
             position: fixed;
             top: 0;
@@ -100,11 +97,10 @@
             justify-content: space-between;
             align-items: center;
             background: rgba(3, 3, 10, .92);
-            border-bottom: 1px solid #00e5ff;
+            border-bottom: 1px solid rgb(255 255 255 / 28%);
             backdrop-filter: blur(24px);
         }
 
-        /* NK LOGO */
         .logo {
             text-decoration: none;
             display: flex;
@@ -156,7 +152,7 @@
             font-family: var(--f-head);
             font-size: .5rem;
             font-weight: 500;
-            color: var(--muted2);
+            color: var(--text);
             text-decoration: none;
             letter-spacing: .18em;
             text-transform: uppercase;
@@ -209,15 +205,15 @@
 
             0%,
             100% {
-                opacity: 1;
+                opacity: 1
             }
 
             50% {
-                opacity: .1;
+                opacity: .1
             }
         }
 
-        /* ══════════════════ HERO ══════════════════ */
+        /* ══ HERO ══ */
         #hero {
             min-height: 100vh;
             display: flex;
@@ -231,20 +227,18 @@
             position: absolute;
             inset: 0;
             pointer-events: none;
-            background-image:
-                linear-gradient(rgba(0, 229, 255, .018) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 229, 255, .018) 1px, transparent 1px);
+            background-image: linear-gradient(rgba(0, 229, 255, .018) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 229, 255, .018) 1px, transparent 1px);
             background-size: 56px 56px;
             animation: gd 30s linear infinite;
         }
 
         @keyframes gd {
             from {
-                background-position: 0 0;
+                background-position: 0 0
             }
 
             to {
-                background-position: 0 56px;
+                background-position: 0 56px
             }
         }
 
@@ -297,7 +291,6 @@
             margin-right: .1rem;
         }
 
-        /* HERO NAME — Orbitron, huge */
         .hero-name {
             font-family: var(--f-head);
             font-size: clamp(2.6rem, 8.5vw, 8rem);
@@ -484,27 +477,27 @@
 
             0%,
             100% {
-                opacity: .12;
+                opacity: .12
             }
 
             50% {
-                opacity: 1;
+                opacity: 1
             }
         }
 
         @keyframes up {
             from {
                 opacity: 0;
-                transform: translateY(22px);
+                transform: translateY(22px)
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateY(0)
             }
         }
 
-        /* ══════════════════ SECTIONS ══════════════════ */
+        /* ══ SECTIONS ══ */
         section {
             padding: 4.5rem 5vw;
             position: relative;
@@ -537,6 +530,17 @@
             flex: 1;
             height: 1px;
             background: var(--border);
+        }
+
+        /* ══ SVG ICONS ══ */
+        .icon-svg {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-svg svg {
+            display: block;
         }
 
         /* ══ ABOUT ══ */
@@ -606,8 +610,7 @@
         }
 
         .ac-i {
-            font-size: 1.2rem;
-            margin-bottom: .5rem;
+            margin-bottom: .6rem;
         }
 
         .ac-n {
@@ -674,7 +677,8 @@
         }
 
         .sk-i {
-            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
         }
 
         .sk-n {
@@ -815,7 +819,8 @@
         }
 
         .pi-arr {
-            font-size: .9rem;
+            display: flex;
+            align-items: center;
             color: var(--muted);
             transition: all .25s;
         }
@@ -1089,11 +1094,13 @@
         }
 
         .cl-i {
-            font-size: .85rem;
-            width: 18px;
+            width: 20px;
             text-align: center;
             color: var(--acc);
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .cl-l {
@@ -1108,7 +1115,7 @@
         /* ══ FOOTER ══ */
         footer {
             background: var(--bg);
-            border-top: 1px solid var(--border);
+            border-top: 1px solid rgb(255 255 255 / 28%);
             padding: 1.6rem 5vw;
             display: flex;
             justify-content: space-between;
@@ -1118,7 +1125,7 @@
         .fc {
             font-family: var(--f-mono);
             font-size: .55rem;
-            color: var(--muted);
+            color: var(--text);
             letter-spacing: .06em;
         }
 
@@ -1127,6 +1134,9 @@
             font-size: .55rem;
             color: var(--acc);
             letter-spacing: .06em;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
         }
 
         /* ══ REVEAL ══ */
@@ -1148,9 +1158,7 @@
             }
         }
 
-        /* ═══════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════ */
+        /* ═══ RESPONSIVE ═══ */
         @media(max-width:1100px) {
             .skg {
                 grid-template-columns: repeat(2, 1fr);
@@ -1171,9 +1179,6 @@
                 display: none;
             }
 
-            /* ── MOBILE: All hover states permanently ON ── */
-
-            /* About cards */
             .ac {
                 border-color: var(--bora);
             }
@@ -1182,7 +1187,6 @@
                 transform: scaleY(1);
             }
 
-            /* Skill cards */
             .scat {
                 border-color: rgba(0, 229, 255, .16);
             }
@@ -1191,7 +1195,6 @@
                 opacity: 1;
             }
 
-            /* Project items */
             .pi {
                 background: rgba(0, 229, 255, .016);
                 border-color: rgba(0, 229, 255, .1);
@@ -1205,7 +1208,6 @@
                 color: var(--acc);
             }
 
-            /* Experience blocks */
             .exb {
                 border-color: rgba(0, 229, 255, .13);
             }
@@ -1214,7 +1216,6 @@
                 transform: scaleX(1);
             }
 
-            /* Education cards */
             .educ {
                 border-color: rgba(0, 229, 255, .13);
             }
@@ -1223,13 +1224,11 @@
                 transform: scaleX(1);
             }
 
-            /* Contact links */
             .clink {
                 border-color: var(--acc);
                 color: var(--acc);
             }
 
-            /* NAV */
             nav {
                 padding: .7rem 5vw;
             }
@@ -1238,29 +1237,6 @@
                 display: none;
             }
 
-            .logo-txt {
-                display: flex;
-            }
-
-            /* .logo-txt span:first-child {
-                font-size: .4rem;
-            } */
-
-            /* .logo-txt span:last-child {
-                font-size: .52rem;
-            } */
-
-            /* .logo-box {
-                width: 36px;
-                height: 36px;
-            }
-
-            .logo-box svg {
-                width: 36px;
-                height: 36px;
-            } */
-
-            /* HERO */
             #hero {
                 padding: 6.5rem 5vw 5rem;
                 align-items: flex-start;
@@ -1333,7 +1309,6 @@
                 height: 160px;
             }
 
-            /* SECTIONS */
             section {
                 padding: 3rem 5vw;
             }
@@ -1352,7 +1327,6 @@
                 display: none;
             }
 
-            /* ABOUT */
             .ag {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -1383,7 +1357,6 @@
                 font-size: .5rem;
             }
 
-            /* SKILLS */
             .skg {
                 grid-template-columns: 1fr;
                 gap: .8rem;
@@ -1393,7 +1366,6 @@
                 padding: 1.4rem;
             }
 
-            /* PROJECTS */
             .pi {
                 grid-template-columns: 1fr;
                 gap: .6rem;
@@ -1426,7 +1398,6 @@
                 transform: none;
             }
 
-            /* EXPERIENCE */
             .exg {
                 grid-template-columns: 1fr;
                 gap: 1.1rem;
@@ -1444,7 +1415,6 @@
                 font-size: .79rem;
             }
 
-            /* EDUCATION */
             .edug {
                 grid-template-columns: 1fr 1fr;
                 gap: .8rem;
@@ -1462,7 +1432,6 @@
                 font-size: .7rem;
             }
 
-            /* CONTACT */
             .ctg {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -1487,7 +1456,6 @@
                 font-size: .8rem;
             }
 
-            /* FOOTER */
             footer {
                 flex-direction: column;
                 gap: .35rem;
@@ -1517,26 +1485,20 @@
 </head>
 
 <body>
-
     <div id="cur"></div>
     <div id="ring"></div>
 
     <!-- ═══ NAV ═══ -->
     <nav>
         <a class="logo" href="#">
-            <!-- NK SVG LOGO -->
             <div class="logo-box">
                 <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- outer hex border -->
                     <polygon points="22,2 40,12 40,32 22,42 4,32 4,12" stroke="#00e5ff" stroke-width="1" fill="none"
                         opacity=".3" />
-                    <!-- inner hex -->
                     <polygon points="22,7 36,15 36,29 22,37 8,29 8,15" stroke="#00e5ff" stroke-width=".5" fill="none"
                         opacity=".15" />
-                    <!-- accent dots -->
                     <circle cx="40" cy="12" r="2" fill="#00e5ff" />
                     <circle cx="4" cy="12" r="1.2" fill="#00e5ff" opacity=".4" />
-                    <!-- NK text — centered -->
                     <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle"
                         font-family="Orbitron,sans-serif" font-size="12" font-weight="900" fill="#00e5ff"
                         letter-spacing="-0.5">NK</text>
@@ -1547,7 +1509,6 @@
                 <span>Nafis Khan</span>
             </div>
         </a>
-
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -1601,7 +1562,8 @@
 
     <!-- ═══ ABOUT ═══ -->
     <section id="about">
-        <div class="sh rv"><span class="sh-n">01 /</span>
+        <div class="sh rv">
+            <span class="sh-n">01 /</span>
             <h2 class="sh-t">About Me</h2>
             <div class="sh-r"></div>
         </div>
@@ -1617,23 +1579,54 @@
                     deepening my CS fundamentals while building real products every day.</p>
             </div>
             <div class="acards rv">
+                <!-- Icon: Zap/Lightning -->
                 <div class="ac">
-                    <div class="ac-i">⚡</div>
+                    <div class="ac-i">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                        </svg>
+                    </div>
                     <div class="ac-n">1.2+</div>
                     <div class="ac-l">Years at Zebaq</div>
                 </div>
+                <!-- Icon: Rocket -->
                 <div class="ac">
-                    <div class="ac-i">🚀</div>
+                    <div class="ac-i">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                            <path
+                                d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                        </svg>
+                    </div>
                     <div class="ac-n">5+</div>
                     <div class="ac-l">Projects Shipped</div>
                 </div>
+                <!-- Icon: GraduationCap -->
                 <div class="ac">
-                    <div class="ac-i">🎓</div>
+                    <div class="ac-i">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
+                    </div>
                     <div class="ac-n">8.10</div>
                     <div class="ac-l">BCA CGPA</div>
                 </div>
+                <!-- Icon: BookOpen -->
                 <div class="ac">
-                    <div class="ac-i">📖</div>
+                    <div class="ac-i">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                    </div>
                     <div class="ac-n">MCA</div>
                     <div class="ac-l">Pursuing 2025–27</div>
                 </div>
@@ -1643,48 +1636,130 @@
 
     <!-- ═══ SKILLS ═══ -->
     <section id="skills">
-        <div class="sh rv"><span class="sh-n">02 /</span>
+        <div class="sh rv">
+            <span class="sh-n">02 /</span>
             <h2 class="sh-t">Skills &amp; Stack</h2>
             <div class="sh-r"></div>
         </div>
         <div class="skg">
+            <!-- Frontend: Monitor -->
             <div class="scat rv">
-                <div class="sk-hd"><span class="sk-i">🌐</span><span class="sk-n">Frontend</span></div>
-                <div class="tags"><span class="tag on">HTML5</span><span class="tag on">CSS3</span><span
+                <div class="sk-hd">
+                    <span class="sk-i">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </span>
+                    <span class="sk-n">Frontend</span>
+                </div>
+                <div class="tags">
+                    <span class="tag on">HTML5</span><span class="tag on">CSS3</span><span
                         class="tag on">JavaScript</span><span class="tag on">React</span><span
-                        class="tag on">Bootstrap</span><span class="tag">Responsive</span></div>
+                        class="tag on">Bootstrap</span><span class="tag">Responsive</span>
+                </div>
             </div>
+            <!-- Backend: Server -->
             <div class="scat rv">
-                <div class="sk-hd"><span class="sk-i">⚙️</span><span class="sk-n">Backend</span></div>
-                <div class="tags"><span class="tag on v2">Node.js</span><span class="tag on v2">PHP</span><span
-                        class="tag v2">Express.js</span><span class="tag v2">REST APIs</span></div>
+                <div class="sk-hd">
+                    <span class="sk-i">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c6bff" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                            <line x1="6" y1="6" x2="6.01" y2="6" />
+                            <line x1="6" y1="18" x2="6.01" y2="18" />
+                        </svg>
+                    </span>
+                    <span class="sk-n">Backend</span>
+                </div>
+                <div class="tags">
+                    <span class="tag on v2">Node.js</span><span class="tag on v2">PHP</span><span
+                        class="tag v2">Express.js</span><span class="tag v2">REST APIs</span>
+                </div>
             </div>
+            <!-- Database: Database icon -->
             <div class="scat rv">
-                <div class="sk-hd"><span class="sk-i">🗄️</span><span class="sk-n">Database</span></div>
-                <div class="tags"><span class="tag on v3">MySQL</span><span class="tag on v3">MongoDB</span><span
-                        class="tag v3">SQL</span></div>
+                <div class="sk-hd">
+                    <span class="sk-i">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff3d6b" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                        </svg>
+                    </span>
+                    <span class="sk-n">Database</span>
+                </div>
+                <div class="tags">
+                    <span class="tag on v3">MySQL</span><span class="tag on v3">MongoDB</span><span
+                        class="tag v3">SQL</span>
+                </div>
             </div>
+            <!-- CMS: Layout/Layers -->
             <div class="scat rv">
-                <div class="sk-hd"><span class="sk-i">🛒</span><span class="sk-n">CMS &amp; Platforms</span></div>
-                <div class="tags"><span class="tag on">WordPress</span><span class="tag on">Shopify</span><span
-                        class="tag">cPanel</span><span class="tag">FTP</span></div>
+                <div class="sk-hd">
+                    <span class="sk-i">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </span>
+                    <span class="sk-n">CMS &amp; Platforms</span>
+                </div>
+                <div class="tags">
+                    <span class="tag on">WordPress</span><span class="tag on">Shopify</span><span
+                        class="tag">cPanel</span><span class="tag">FTP</span>
+                </div>
             </div>
+            <!-- Tools: Wrench/Tool -->
             <div class="scat rv">
-                <div class="sk-hd"><span class="sk-i">🔧</span><span class="sk-n">Tools</span></div>
-                <div class="tags"><span class="tag on v2">Git / GitHub</span><span class="tag on v2">VS Code</span><span
-                        class="tag v2">Figma</span><span class="tag v2">Canva</span></div>
+                <div class="sk-hd">
+                    <span class="sk-i">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c6bff" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                    </span>
+                    <span class="sk-n">Tools</span>
+                </div>
+                <div class="tags">
+                    <span class="tag on v2">Git / GitHub</span><span class="tag on v2">VS Code</span><span
+                        class="tag v2">Figma</span><span class="tag v2">Canva</span>
+                </div>
             </div>
+            <!-- Soft Skills: Brain/CPU -->
             <div class="scat rv">
-                <div class="sk-hd"><span class="sk-i">🧠</span><span class="sk-n">Soft Skills</span></div>
-                <div class="tags"><span class="tag">Problem Solving</span><span class="tag">Teamwork</span><span
-                        class="tag">Detail-Oriented</span><span class="tag">Adaptability</span></div>
+                <div class="sk-hd">
+                    <span class="sk-i">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12 2a4 4 0 0 1 4 4 4 4 0 0 1-1.2 2.8A4 4 0 0 1 20 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4V4" />
+                            <path d="M8 18a4 4 0 0 1-4-4 4 4 0 0 1 4-4" />
+                            <line x1="12" y1="12" x2="12" y2="20" />
+                            <line x1="8" y1="20" x2="16" y2="20" />
+                        </svg>
+                    </span>
+                    <span class="sk-n">Soft Skills</span>
+                </div>
+                <div class="tags">
+                    <span class="tag">Problem Solving</span><span class="tag">Teamwork</span><span
+                        class="tag">Detail-Oriented</span><span class="tag">Adaptability</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ═══ PROJECTS ═══ -->
     <section id="projects">
-        <div class="sh rv"><span class="sh-n">03 /</span>
+        <div class="sh rv">
+            <span class="sh-n">03 /</span>
             <h2 class="sh-t">Projects</h2>
             <div class="sh-r"></div>
         </div>
@@ -1698,7 +1773,13 @@
                 </div>
                 <div class="pi-tags"><span class="pi-tag">React</span><span class="pi-tag">Node.js</span><span
                         class="pi-tag">MySQL</span></div>
-                <div class="pi-arr">↗</div>
+                <div class="pi-arr">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </div>
             </div>
             <div class="pi rv">
                 <div class="pi-n">02</div>
@@ -1709,7 +1790,13 @@
                 </div>
                 <div class="pi-tags"><span class="pi-tag">React</span><span class="pi-tag">Node.js</span><span
                         class="pi-tag">MySQL</span></div>
-                <div class="pi-arr">↗</div>
+                <div class="pi-arr">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </div>
             </div>
             <a href="https://toptalentskills.com" target="_blank" class="pi rv">
                 <div class="pi-n">03</div>
@@ -1720,7 +1807,13 @@
                 </div>
                 <div class="pi-tags"><span class="pi-tag">WordPress</span><span class="pi-tag">MySQL</span><span
                         class="pi-tag">Bootstrap</span></div>
-                <div class="pi-arr">↗</div>
+                <div class="pi-arr">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </div>
             </a>
             <a href="https://obsessionsj.com" target="_blank" class="pi rv">
                 <div class="pi-n">04</div>
@@ -1731,7 +1824,13 @@
                 </div>
                 <div class="pi-tags"><span class="pi-tag">Shopify</span><span class="pi-tag">JavaScript</span><span
                         class="pi-tag">CSS3</span></div>
-                <div class="pi-arr">↗</div>
+                <div class="pi-arr">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </div>
             </a>
             <div class="pi rv">
                 <div class="pi-n">05</div>
@@ -1742,14 +1841,21 @@
                 </div>
                 <div class="pi-tags"><span class="pi-tag">JavaScript</span><span class="pi-tag">MySQL</span><span
                         class="pi-tag">Bootstrap</span></div>
-                <div class="pi-arr">↗</div>
+                <div class="pi-arr">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ═══ EXPERIENCE ═══ -->
     <section id="experience">
-        <div class="sh rv"><span class="sh-n">04 /</span>
+        <div class="sh rv">
+            <span class="sh-n">04 /</span>
             <h2 class="sh-t">Experience</h2>
             <div class="sh-r"></div>
         </div>
@@ -1786,7 +1892,8 @@
 
     <!-- ═══ EDUCATION ═══ -->
     <section id="education">
-        <div class="sh rv"><span class="sh-n">05 /</span>
+        <div class="sh rv">
+            <span class="sh-n">05 /</span>
             <h2 class="sh-t">Education</h2>
             <div class="sh-r"></div>
         </div>
@@ -1829,27 +1936,53 @@
                 <div class="ct-big">Let's<span>Work Together.</span></div>
                 <p>Have a project in mind or want to collaborate? My inbox is always open. Let's build something great.
                 </p>
-                <a href="/cdn-cgi/l/email-protection#0e606f68677d6f66636f6a65666f6038394e69636f6762206d6163"
-                    class="btn btn-p" style="width:fit-content;"><span>Send a Message</span><span>→</span></a>
+                <a href="mailto:nafisahmadkhan@example.com" class="btn btn-p" style="width:fit-content;">
+                    <span>Send a Message</span><span>→</span>
+                </a>
             </div>
             <div class="clinks rv">
-                <a href="/cdn-cgi/l/email-protection#f997989f908a989194989d92919897cfceb99e94989095d79a9694"
-                    class="clink">
-                    <span class="cl-i">✉</span>
-                    <div><span class="cl-l">Email</span><span class="__cf_email__"
-                            data-cfemail="640a05020d17050c0905000f0c050a5253240309050d084a070b09">[email&#160;protected]</span>
-                    </div>
+                <!-- Email icon -->
+                <a href="mailto:nafisahmadkhan@example.com" class="clink">
+                    <span class="cl-i">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </span>
+                    <div><span class="cl-l">Email</span>nafisahmadkhan67@gmail.com</div>
                 </a>
+                <!-- Phone icon -->
                 <a href="tel:+919999664070" class="clink">
-                    <span class="cl-i">📞</span>
+                    <span class="cl-i">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.29 6.29l.87-.87a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                    </span>
                     <div><span class="cl-l">Phone</span>+91 9999664070</div>
                 </a>
-                <a href="https://github.com" target="_blank" class="clink">
-                    <span class="cl-i">⌥</span>
+                <!-- GitHub icon -->
+                <a href="https://github.com/nafiskhan" target="_blank" class="clink">
+                    <span class="cl-i">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                    </span>
                     <div><span class="cl-l">GitHub</span>github.com/nafiskhan</div>
                 </a>
+                <!-- Location icon -->
                 <div class="clink">
-                    <span class="cl-i">📍</span>
+                    <span class="cl-i">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </span>
                     <div><span class="cl-l">Location</span>Bhubaneswar, Odisha, India</div>
                 </div>
             </div>
@@ -1859,12 +1992,16 @@
     <!-- ═══ FOOTER ═══ -->
     <footer>
         <div class="fc">© 2026 Nafis Ahmad Khan. All rights reserved.</div>
-        <div class="ft">Crafted with precision ⚡</div>
+        <div class="ft">
+            Crafted with precision
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#00e5ff" stroke="none">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+        </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
-        // Custom cursor — desktop only
+        // Custom cursor
         const cur = document.getElementById('cur'), ring = document.getElementById('ring');
         if (window.matchMedia('(pointer:fine)').matches) {
             let mx = 0, my = 0, rx = 0, ry = 0;
@@ -1894,10 +2031,10 @@
         }
 
         // Scroll reveal
-        const obs = new IntersectionObserver(function (entries) {
-            entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('on'); });
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
         }, { threshold: 0.05 });
-        document.querySelectorAll('.rv').forEach(function (el) { obs.observe(el); });
+        document.querySelectorAll('.rv').forEach(el => obs.observe(el));
     </script>
 </body>
 
